@@ -1,0 +1,3 @@
+C:\Users\Sean\source\repos\NodejsConsoleApp4\obj\Debug\NodejsConsoleApp4.njsproj.AssemblyReference.cache
+C:\Users\Sean\source\repos\NodejsConsoleApp4\obj\Debug\NodejsConsoleApp4.njsproj.CoreCompileInputs.cache
+C:\Users\Sean\source\repos\NodejsConsoleApp4\bin\Microsoft.NodejsTools.WebRole.dll
