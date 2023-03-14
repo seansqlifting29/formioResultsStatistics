@@ -1,11 +1,9 @@
-function dumpProps(obj, objName) {
-    let result = "";
+function dumpProps(obj) {
     for (const i in obj) {
-        result += `${objName}.${i} = ${obj[i]}<br>`;
+        console.log(`${i} = ` + obj[i]);
     }
-    result += "<hr>";
-    return result;
 }
+
 let car = {
         "Make": "Chevy",
         "Model": "Ford",
@@ -29,9 +27,33 @@ var formioResult2 = {
     },
     "metadata": {}
 }
+
 var formioResults = [formioResult1, formioResult2];
 
-let a = dumpProps(car, "carNew");
-console.log(a);
+function formioStatsT(arr) {
+    var c = 0;
+    for (let i in arr) {
+        for (let i2 in arr[i].data)
+            if (arr[i].data[i2] === true) {
+                c++;
+                console.log(`${i2} = ` + arr[i].data[i2])
+            }
+    }
+    console.log(c);
+}
+function formioStatsF(arr) {
+    var d = 0;
+    for (let i in arr) {
+        for (let i2 in arr[i].data)
+            if (arr[i].data[i2] === false) {
+                d++;
+                console.log(`${i2} = ` + arr[i].data[i2])
+            }
+    }
+    console.log(d);
+}
 
-
+let a = dumpProps(car);
+let b = formioStatsT(formioResults);
+let d = formioStatsF(formioResults);
+//d = console.log(`${i2} = ` + arr[i].data[i2])
